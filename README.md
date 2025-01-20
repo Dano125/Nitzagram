@@ -6,3 +6,5 @@ Nitzanim Instagram project w/ my homies
 3. No annoying issues
 4. No war crimes
 5. No homo
+6. Use protection
+
