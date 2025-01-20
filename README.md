@@ -9,3 +9,8 @@ Nitzanim Instagram project w/ my homies
 6. Use protection
 7. No munching on gum
 9. No number 8
+10. Dont get ban form git (importent)
+11. Skip to 68
+68. The rule below me is sus
+69. ( ͡° ͜ʖ ͡°)
+70. Hello
