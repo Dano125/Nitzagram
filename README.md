@@ -7,3 +7,4 @@ Nitzanim Instagram project w/ my homies
 4. No war crimes
 5. No homo
 6. Use protection
+7. dont get ban form git
