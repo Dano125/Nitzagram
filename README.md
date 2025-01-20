@@ -7,3 +7,5 @@ Nitzanim Instagram project w/ my homies
 4. No war crimes
 5. No homo
 6. Use protection
+7. No munching on gum
+9. No number 8
