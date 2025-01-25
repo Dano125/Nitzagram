@@ -1,8 +1,7 @@
 import pygame
 
-from buttons import like_button
 from constants import *
-from helpers import screen
+from helpers import screen, read_comment_from_user
 
 
 class Post:
@@ -21,6 +20,7 @@ class Post:
         self.likes_counter += 1
 
     def add_comment(self, text):
+        # TODO: ADD COMMENT OBJECT
         self.comments.append(text)
 
     def display(self):
@@ -74,6 +74,11 @@ class Post:
             position_index += 1
             if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
                 break
+
+
+# class Comment:
+#     def __init__(self, text):
+#         self.text = text
 
 
 class ImagePost(Post):
