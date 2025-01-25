@@ -1,5 +1,6 @@
 import pygame
 
+from buttons import like_button
 from constants import *
 from helpers import screen
 
@@ -14,6 +15,7 @@ class Post:
         self.description = description
         self.likes_counter = likes_counter
         self.comments = comments
+        self.comments_display_index = len(comments)
 
     def add_like(self):
         self.likes_counter += 1
@@ -28,9 +30,24 @@ class Post:
 
         :return: None
         """
-        # TODO: write me!
-        pass
+        font = pygame.font.SysFont('chalkduster.ttf', UI_FONT_SIZE)
 
+        username = font.render(self.username, True, BLACK)
+        screen.blit(username, (USER_NAME_X_POS, USER_NAME_Y_POS))
+
+        location = font.render(self.location, True, LIGHT_GRAY)
+        screen.blit(location, (LOCATION_TEXT_X_POS, LOCATION_TEXT_Y_POS))
+
+        if self.likes_counter == 1:
+            likes = font.render(f"liked by {self.likes_counter} user", True, GREY)
+        else:
+            likes = font.render(f"liked by {self.likes_counter} users", True, GREY)
+        screen.blit(likes, (LIKE_TEXT_X_POS, LIKE_TEXT_Y_POS))
+
+        description = font.render(self.description, True, BLACK)
+        screen.blit(description, (DESCRIPTION_TEXT_X_POS, DESCRIPTION_TEXT_Y_POS))
+
+        self.display_comments()
 
     def display_comments(self):
         """
@@ -59,4 +76,11 @@ class Post:
                 break
 
 
+class ImagePost(Post):
+    # TODO: write me! load images and override the super().display() method
+    pass
 
+
+class TextPost(Post):
+    # TODO: write me! draw background and create text then override the super().display() method
+    pass
