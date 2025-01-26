@@ -11,6 +11,6 @@ __pycache__/constants.cpython-312.pyc
 __pycache__/helpers.cpython-312.pyc
 constants.cpython-312.pyc
 helpers.cpython-312.pyc
-__pycache__
+/pycache/*
 __pycache__/constants.cpython-312.pyc
 __pycache__/helpers.cpython-312.pyc
