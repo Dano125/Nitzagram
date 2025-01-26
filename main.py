@@ -47,6 +47,7 @@ def main():
                 if like_rect.collidepoint(mouse_pos):  # check if mouse click like
                     test_post.add_like()
                 else:
+                    # Check if the user clicked on the view more comments button and advances to the next post in a loop
                     if post_index_to_display == len(posts_list) - 1:
                         post_index_to_display = 0
                     else:
@@ -56,7 +57,7 @@ def main():
         screen.fill(BLACK)
         screen.blit(background, (0, 0))
 
-        # ↓↓↓ TEST!!! ↓↓↓
+        # Shows the next post according to the post index
         posts_list[post_index_to_display].display()
 
         # Update display - without input update everything
