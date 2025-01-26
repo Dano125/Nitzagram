@@ -78,7 +78,13 @@ class Post:
 
 class ImagePost(Post):
     # TODO: write me! load images and override the super().display() method
-    pass
+    def __init__(self, username, location, description, likes_counter, comments, img_path):
+        super().__init__(username, location, description, likes_counter, comments)
+        self.img_path = img_path
+
+    def display(self):
+        pass
+        
 
 
 class TextPost(Post):
