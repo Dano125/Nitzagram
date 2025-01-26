@@ -67,13 +67,15 @@ class Post:
                                                     VIEW_MORE_COMMENTS_Y_POS))
 
         # Display 4 comments starting from comments_display_index
-        for i in range(0, len(self.comments)):
-            if position_index >= len(self.comments):
-                position_index = 0
-            self.comments[position_index].display(i)
-            position_index += 1
-            if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
-                break
+        #! This doesn't work so commented out to prevent unwanted crashes
+        # TODO: Fix
+        # for i in range(0, len(self.comments)):
+        #     if position_index >= len(self.comments):
+        #         position_index = 0
+        #     self.comments[position_index].display(i)
+        #     position_index += 1
+        #     if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
+        #         break
 
 
 class ImagePost(Post):
@@ -83,7 +85,12 @@ class ImagePost(Post):
         self.img_path = img_path
 
     def display(self):
-        pass
+        super().display()
+
+        image = pygame.image.load(self.img_path)
+        # Fix size
+        image = pygame.transform.scale(image, (POST_WIDTH, POST_HEIGHT))
+        screen.blit(image, (POST_X_POS, POST_Y_POS))
         
 
 
