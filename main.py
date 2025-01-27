@@ -30,7 +30,7 @@ def main():
     posts_list.append(test_post)
 
     # ----- ↓↓↓ Shrekxy IMAGE TEST POST!!! ↓↓↓ -----
-    shrekxy_img = "Images\shrekxy_img.jpg"
+    shrekxy_img = "Images\\shrekxy_img.jpg"
     image_post = Post.ImagePost("Ron", "North Korea", "Long live Kim Jong Un", shrekxy_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(image_post)
