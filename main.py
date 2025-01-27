@@ -25,7 +25,8 @@ def main():
     posts_list = []
 
     # ----- ↓↓↓ EMPTY TEST POST!!! ↓↓↓ -----
-    test_post = Post.Post("daniel", "beer", "yay")
+    noa_img = "Images\\noa_img.jpg"
+    test_post = Post.Post("daniel", "beer", "yay", noa_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(test_post)
 
@@ -35,7 +36,21 @@ def main():
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(image_post)
     
+    ronaldo_img = "Images\\ronaldo_img.jpg"
+    sec_post = Post.ImagePost("Itay", "Portugal", "Long live Ronaldo", ronaldo_img)
+    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
+    posts_list.append(sec_post)
 
+    shrke_img = "Images\\masts_img.jpg"
+    tre_post = Post.ImagePost("daniel", "Isral", "sus", shrke_img)
+    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
+    posts_list.append(tre_post)
+
+    man_img = "Images\\man_img.jpg"
+    four_post = Post.ImagePost("ron", "?", "my man", man_img)
+    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
+    posts_list.append(four_post)
+    
     post_index_to_display = 0
     running = True
     while running:
