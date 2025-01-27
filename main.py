@@ -21,10 +21,20 @@ def main():
                                         (WINDOW_WIDTH, WINDOW_HEIGHT))
 
     # TODO: add a post here
+    # ----- ↓↓↓ POST LIST!!! ↓↓↓ -----
+    posts_list = []
+
     # ----- ↓↓↓ EMPTY TEST POST!!! ↓↓↓ -----
     test_post = Post.Post("daniel", "beer", "yay", 0, [])
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
+    posts_list.append(test_post)
 
+    # ----- ↓↓↓ Shrekxy IMAGE TEST POST!!! ↓↓↓ -----
+    shrekxy_img = "Images\shrekxy_img.jpg"
+    image_post = Post.ImagePost("Ron", "North Korea", "Long live Kim Jong Un", 69, "Dictatorship!", shrekxy_img)
+    posts_list.append(image_post)
+    
+    post_index_to_display = 0
     running = True
     while running:
         # Grabs events such as key pressed, mouse pressed and so.
@@ -36,13 +46,19 @@ def main():
                 mouse_pos = event.pos  # Get mouse position
                 if like_rect.collidepoint(mouse_pos):  # check if mouse click like
                     test_post.add_like()
+                else:
+                    # Check if the user clicked on the view more comments button and advances to the next post in a loop
+                    if post_index_to_display == len(posts_list) - 1:
+                        post_index_to_display = 0
+                    else:
+                        post_index_to_display += 1
 
         # Display the background, presented Image, likes, comments, tags and location(on the Image)
         screen.fill(BLACK)
         screen.blit(background, (0, 0))
 
-        # ↓↓↓ TEST!!! ↓↓↓
-        test_post.display()
+        # Shows the next post according to the post index
+        posts_list[post_index_to_display].display()
 
         # Update display - without input update everything
         pygame.display.update()
