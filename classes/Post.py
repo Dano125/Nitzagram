@@ -69,13 +69,13 @@ class Post:
         # Display 4 comments starting from comments_display_index
         #! This doesn't work so commented out to prevent unwanted crashes
         # TODO: Fix
-        # for i in range(0, len(self.comments)):
-        #     if position_index >= len(self.comments):
-        #         position_index = 0
-        #     self.comments[position_index].display(i)
-        #     position_index += 1
-        #     if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
-        #         break
+        for i in range(0, len(self.comments)):
+            if position_index >= len(self.comments):
+                position_index = 0
+            self.comments[position_index].display(i)
+            position_index += 1
+            if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
+                break
 
 
 # class Comment:
