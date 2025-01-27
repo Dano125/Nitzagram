@@ -8,13 +8,13 @@ class Post:
     """
     A class used to represent post on Nitzagram
     """
-    def __init__(self, username, location, description):
+    def __init__(self, username, location, description, likes_counter, comments):
         self.username = username
         self.location = location
         self.description = description
-        self.likes_counter = 0
-        self.comments = []
-        self.comments_display_index = len(self.comments)
+        self.likes_counter = likes_counter
+        self.comments = comments
+        self.comments_display_index = len(comments)
 
     def add_like(self):
         self.likes_counter += 1
@@ -67,26 +67,26 @@ class Post:
                                                     VIEW_MORE_COMMENTS_Y_POS))
 
         # Display 4 comments starting from comments_display_index
-        # This doesn't work so commented out to prevent unwanted crashes
+        #! This doesn't work so commented out to prevent unwanted crashes
         # TODO: Fix
-        for i in range(0, len(self.comments)):
-            if position_index >= len(self.comments):
-                position_index = 0
-            self.comments[position_index].display(i)
-            position_index += 1
-            if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
-                break
+        # for i in range(0, len(self.comments)):
+        #     if position_index >= len(self.comments):
+        #         position_index = 0
+        #     self.comments[position_index].display(i)
+        #     position_index += 1
+        #     if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
+        #         break
 
 
-class Comment:
-    def __init__(self, text):
-        self.text = text
+# class Comment:
+#     def __init__(self, text):
+#         self.text = text
 
 
 class ImagePost(Post):
     # TODO: write me! load images and override the super().display() method
-    def __init__(self, username, location, description, img_path):
-        super().__init__(username, location, description)
+    def __init__(self, username, location, description, likes_counter, comments, img_path):
+        super().__init__(username, location, description, likes_counter, comments)
         self.img_path = img_path
 
     def display(self):
@@ -97,6 +97,7 @@ class ImagePost(Post):
         image = pygame.transform.scale(image, (POST_WIDTH, POST_HEIGHT))
         screen.blit(image, (POST_X_POS, POST_Y_POS))
         
+
 
 class TextPost(Post):
     # TODO: write me! draw background and create text then override the super().display() method
