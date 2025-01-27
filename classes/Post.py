@@ -82,6 +82,9 @@ class Post:
 #     def __init__(self, text):
 #         self.text = text
 
+    def display(self, text):
+        pass
+
 
 class ImagePost(Post):
     # TODO: write me! load images and override the super().display() method
