@@ -32,8 +32,10 @@ def main():
     # ----- ↓↓↓ Shrekxy IMAGE TEST POST!!! ↓↓↓ -----
     shrekxy_img = "Images\shrekxy_img.jpg"
     image_post = Post.ImagePost("Ron", "North Korea", "Long live Kim Jong Un", 69, "Dictatorship!", shrekxy_img)
+    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(image_post)
     
+
     post_index_to_display = 0
     running = True
     while running:
@@ -45,7 +47,7 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN:  # check for mouse events
                 mouse_pos = event.pos  # Get mouse position
                 if like_rect.collidepoint(mouse_pos):  # check if mouse click like
-                    test_post.add_like()
+                     posts_list[post_index_to_display].add_like()
                 else:
                     # Check if the user clicked on the view more comments button and advances to the next post in a loop
                     if post_index_to_display == len(posts_list) - 1:
