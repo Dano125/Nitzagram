@@ -8,13 +8,13 @@ class Post:
     """
     A class used to represent post on Nitzagram
     """
-    def __init__(self, username, location, description, likes_counter, comments):
+    def __init__(self, username, location, description):
         self.username = username
         self.location = location
         self.description = description
-        self.likes_counter = likes_counter
-        self.comments = comments
-        self.comments_display_index = len(comments)
+        self.likes_counter = 0
+        self.comments = []
+        self.comments_display_index = len(self.comments)
 
     def add_like(self):
         self.likes_counter += 1
@@ -82,14 +82,14 @@ class Post:
 #     def __init__(self, text):
 #         self.text = text
 
-    def display(self, text):
-        pass
+    # def display(self, text):
+    #     pass
 
 
 class ImagePost(Post):
     # TODO: write me! load images and override the super().display() method
-    def __init__(self, username, location, description, likes_counter, comments, img_path):
-        super().__init__(username, location, description, likes_counter, comments)
+    def __init__(self, username, location, description, img_path):
+        super().__init__(username, location, description)
         self.img_path = img_path
 
     def display(self):
