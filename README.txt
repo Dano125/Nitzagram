@@ -29,7 +29,7 @@ Nitzanim Instagram project w/ my homies
 674. DON'T WRITE WITH ONLY CAPS!!!
 675. No loli, only milfs
 676. Zindani isn't allowed to turn on Mizrahit
-678. why you go to 666 your the devil go back to number 10 and be 10
+678. why you go to 666 you are the devil? go back to number 10 and be 10
 10. make everything perfect
 11. everything is legal as long as there are no cops
-12.if there are cops run fast
+12.if there are cops you need to run fast
