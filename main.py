@@ -25,8 +25,8 @@ def main():
     posts_list = []
 
     # ----- ↓↓↓ EMPTY TEST POST!!! ↓↓↓ -----
-    noa_img = "Images\\noa_img.jpg"
-    test_post = Post.Post("daniel", "beer", "yay", noa_img)
+    noa_img = "Images\\noa_kirel.jpg"
+    test_post = Post.ImagePost("daniel", "beer", "yay", noa_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(test_post)
 
@@ -36,7 +36,7 @@ def main():
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(image_post)
     
-    ronaldo_img = "Images\\ronaldo_img.jpg"
+    ronaldo_img = "Images\\ronaldo.jpg"
     sec_post = Post.ImagePost("Itay", "Portugal", "Long live Ronaldo", ronaldo_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(sec_post)
