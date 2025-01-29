@@ -1,5 +1,5 @@
 # Create Buttons: like, comment, change_image, view more comments
-from classes.Button import Button
+from class_module.Button import Button
 from constants import *
 
 like_button = Button(LIKE_BUTTON_X_POS,
