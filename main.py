@@ -26,28 +26,28 @@ def main():
 
     # ----- ↓↓↓ EMPTY TEST POST!!! ↓↓↓ -----
     noa_img = "Images\\noa_img.jpg"
-    test_post = Post.Post("daniel", "beer", "yay", noa_img)
+    test_post = Post.Post("daniel", "beer", "yay", noa_img, [])
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(test_post)
 
     # ----- ↓↓↓ Shrekxy IMAGE TEST POST!!! ↓↓↓ -----
     shrekxy_img = "Images\\shrekxy_img.jpg"
-    image_post = Post.ImagePost("Ron", "North Korea", "Long live Kim Jong Un", shrekxy_img)
+    image_post = Post.ImagePost("Ron", "North Korea", "Long live Kim Jong Un", 69, [], shrekxy_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(image_post)
     
-    ronaldo_img = "Images\\ronaldo_img.jpg"
-    sec_post = Post.ImagePost("Itay", "Portugal", "Long live Ronaldo", ronaldo_img)
+    ronaldo_img = "Images\\ronaldo.jpg"
+    sec_post = Post.ImagePost("Itay", "Portugal", "Long live Ronaldo", -12, [], ronaldo_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(sec_post)
 
-    shrke_img = "Images\\masts_img.jpg"
-    tre_post = Post.ImagePost("daniel", "Isral", "sus", shrke_img)
+    masts_img = "Images\\masts_img.jpg"
+    tre_post = Post.ImagePost("daniel", "Isral", "sus", 3, [], masts_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(tre_post)
 
     man_img = "Images\\man_img.jpg"
-    four_post = Post.ImagePost("ron", "?", "my man", man_img)
+    four_post = Post.ImagePost("Ron", "?", "my man", 420, [], man_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(four_post)
     

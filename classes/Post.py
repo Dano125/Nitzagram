@@ -8,7 +8,7 @@ class Post:
     """
     A class used to represent post on Nitzagram
     """
-    def __init__(self, username, location, description):
+    def __init__(self, username: str, location: str, description: str):
         self.username = username
         self.location = location
         self.description = description
@@ -88,7 +88,7 @@ class Comment:
 
 class ImagePost(Post):
     # TODO: write me! load images and override the super().display() method
-    def __init__(self, username, location, description, img_path):
+    def __init__(self, username: str, location: str, description: str, img_path: str):
         super().__init__(username, location, description)
         self.img_path = img_path
 
@@ -114,7 +114,7 @@ class Post:
     """
     A class used to represent post on Nitzagram
     """
-    def __init__(self, username, location, description, likes_counter, comments):
+    def __init__(self, username: str, location: str, description: str, likes_counter: int, comments: list):
         self.username = username
         self.location = location
         self.description = description
