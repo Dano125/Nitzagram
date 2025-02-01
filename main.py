@@ -34,6 +34,8 @@ def main():
     shrekxy_img = "Images\\shrekxy_img.jpg"
     image_post = ImagePost("Ron", "North Korea", "Long live Kim Jong Un", shrekxy_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
+    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
+    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(image_post)
     
     ronaldo_img = "Images\\ronaldo.jpg"
@@ -59,16 +61,21 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+
             if event.type == pygame.MOUSEBUTTONDOWN:  # check for mouse events
                 mouse_pos = event.pos  # Get mouse position
+
                 if like_rect.collidepoint(mouse_pos):  # check if mouse click like
                      posts_list[post_index_to_display].add_like()
-                else:
+                     
+                if post_rect.collidepoint(mouse_pos):
                     # Check if the user clicked on the view more comments button and advances to the next post in a loop
                     if post_index_to_display == len(posts_list) - 1:
                         post_index_to_display = 0
                     else:
                         post_index_to_display += 1
+                if comment_rect.collidepoint(mouse_pos):
+                    posts_list[post_index_to_display].add_comment()
 
         # Display the background, presented Image, likes, comments, tags and location(on the Image)
         screen.fill(BLACK)

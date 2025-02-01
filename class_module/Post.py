@@ -1,8 +1,8 @@
 import pygame
 
 from constants import *
-from helpers import screen, read_comment_from_user
-from class_module import Comment
+from helpers import *
+from .Comment import Comment
 
 
 class Post:
@@ -20,9 +20,11 @@ class Post:
     def add_like(self):
         self.likes_counter += 1
 
-    def add_comment(self, text):
+    def add_comment(self):
         # TODO: ADD COMMENT OBJECT
-        self.comments.append(Comment(text))
+        text = read_comment_from_user()
+        comment = Comment(text)
+        self.comments.append(comment)
 
     def display(self):
         """
@@ -47,7 +49,8 @@ class Post:
 
         description = font.render(self.description, True, BLACK)
         screen.blit(description, (DESCRIPTION_TEXT_X_POS, DESCRIPTION_TEXT_Y_POS))
-
+        
+        
         self.display_comments()
 
     def display_comments(self):
@@ -68,12 +71,12 @@ class Post:
                                                     VIEW_MORE_COMMENTS_Y_POS))
 
         # Display 4 comments starting from comments_display_index
-        #! This doesn't work so commented out to prevent unwanted crashes
+        # ! This doesn't work so commented out to prevent unwanted crashes
         # TODO: Fix
-        # for i in range(0, len(self.comments)):
-        #     if position_index >= len(self.comments):
-        #         position_index = 0
-        #     self.comments[position_index].display(i)
-        #     position_index += 1
-        #     if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
-        #         break
+        for i in range(0, len(self.comments)):
+            if position_index >= len(self.comments):
+                position_index = 0
+            self.comments[position_index].display(i)
+            position_index += 1
+            if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
+                break

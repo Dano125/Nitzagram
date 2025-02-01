@@ -55,7 +55,7 @@ def draw_comment_text_box():
     pygame.draw.rect(screen, WHITE,
                      pygame.Rect(VIEW_MORE_COMMENTS_X_POS + 1,
                                  VIEW_MORE_COMMENTS_Y_POS + 1, 298, 18))
-    pygame.display.flip()
+    # pygame.display.flip()
 
 
 # Get the comment that the user typed will using Nitzagram and translate it
