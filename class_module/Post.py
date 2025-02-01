@@ -2,6 +2,7 @@ import pygame
 
 from constants import *
 from helpers import screen, read_comment_from_user
+from class_module import Comment
 
 
 class Post:
@@ -21,7 +22,7 @@ class Post:
 
     def add_comment(self, text):
         # TODO: ADD COMMENT OBJECT
-        self.comments.append(text)
+        self.comments.append(Comment(text))
 
     def display(self):
         """

@@ -6,4 +6,8 @@ from class_module import Post
 
 
 class Comment:
-    pass
+    def __init__(self, text):
+        self.text = text
+
+    def display(self):
+        print("A")
