@@ -3,7 +3,7 @@ from pygame.examples.cursors import image
 
 from helpers import screen
 from constants import *
-from classes import Post
+from class_module import Post, ImagePost, TextPost, Comment
 
 
 def main():
@@ -25,29 +25,29 @@ def main():
     posts_list = []
 
     # ----- ↓↓↓ EMPTY TEST POST!!! ↓↓↓ -----
-    noa_img = "Images\\noa_img.jpg"
-    test_post = Post.Post("daniel", "beer", "yay", noa_img, [])
+    noa_img = "Images\\noa_kirel.jpg"
+    test_post = ImagePost("daniel", "beer", "yay", noa_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(test_post)
 
     # ----- ↓↓↓ Shrekxy IMAGE TEST POST!!! ↓↓↓ -----
     shrekxy_img = "Images\\shrekxy_img.jpg"
-    image_post = Post.ImagePost("Ron", "North Korea", "Long live Kim Jong Un", 69, [], shrekxy_img)
+    image_post = ImagePost("Ron", "North Korea", "Long live Kim Jong Un", shrekxy_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(image_post)
     
     ronaldo_img = "Images\\ronaldo.jpg"
-    sec_post = Post.ImagePost("Itay", "Portugal", "Long live Ronaldo", -12, [], ronaldo_img)
+    sec_post = ImagePost("Itay", "Portugal", "Long live Ronaldo", ronaldo_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(sec_post)
 
     masts_img = "Images\\masts_img.jpg"
-    tre_post = Post.ImagePost("daniel", "Isral", "sus", 3, [], masts_img)
+    tre_post = ImagePost("daniel", "Isral", "sus", masts_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(tre_post)
 
     man_img = "Images\\man_img.jpg"
-    four_post = Post.ImagePost("Ron", "?", "my man", 420, [], man_img)
+    four_post = ImagePost("Ron", "?", "my man", man_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(four_post)
     
