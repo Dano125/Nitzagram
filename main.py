@@ -50,7 +50,7 @@ def main():
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(four_post)
     
-    text_post = TextPost("Yavne GYM", "Yavne", "what is going on in this country", "Even tho im married i like to go to the gym every day", (50, 100, 250), (255, 0, 255))
+    text_post = TextPost("President Trump", "Alabama", "THE N-WORD!","Bomb France? Comment yes/no", (150, 0, 0), (0, 0, 0))
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(text_post)
 
