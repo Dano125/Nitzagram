@@ -21,7 +21,6 @@ class Post:
         self.likes_counter += 1
 
     def add_comment(self):
-        # TODO: ADD COMMENT OBJECT
         text = read_comment_from_user()
         comment = Comment(text)
         self.comments.append(comment)
@@ -71,8 +70,6 @@ class Post:
                                                     VIEW_MORE_COMMENTS_Y_POS))
 
         # Display 4 comments starting from comments_display_index
-        # ! This doesn't work so commented out to prevent unwanted crashes
-        # TODO: Fix
         for i in range(0, len(self.comments)):
             if position_index >= len(self.comments):
                 position_index = 0

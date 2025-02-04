@@ -1,12 +1,11 @@
 import pygame
 
 from constants import *
-from helpers import screen, read_comment_from_user
+from helpers import screen
 from class_module import Post
 
 
 class ImagePost(Post):
-    # TODO: write me! load images and override the super().display() method
     def __init__(self, username, location, description, img_path):
         super().__init__(username, location, description)
         self.img_path = img_path

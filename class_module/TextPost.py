@@ -1,25 +1,28 @@
 import pygame
 
 from constants import *
-from helpers import screen, read_comment_from_user
+from helpers import screen, from_text_to_array
 from class_module import Post
 
 
 class TextPost(Post):
-    def __init__(self, username, location, description):
+    def __init__(self, username, location, description, text, text_color, background_color):
         super().__init__(username, location, description)
+        self.text = text
+        self.text_color = text_color
+        self.bg_color = background_color
 
     def display(self):
         super().display()
 
-        background_color = (255, 255, 255)  
-        text_color = (0, 0, 0)  
-        font = pygame.font.Font(None, 36) 
-        pygame.draw.rect(screen, background_color, (POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT))
+        bg_rect = pygame.rect.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
+        pygame.draw.rect(screen, self.bg_color, bg_rect)
 
-        text_surface = font.render(self.description, True, text_color)
+        font = pygame.font.SysFont('chalkduster.ttf', TEXT_POST_FONT_SIZE)
+        text_list = from_text_to_array(self.text)
+        for i in text_list:
+            text = font.render(i, True, self.text_color)
+            screen.blit(text, (TEXT_POST_X_POS, TEXT_POST_Y_POS + TEXT_POST_LINE_HEIGHT * text_list.index(i)))
 
-        text_rect = text_surface.get_rect(center=(POST_X_POS + POST_WIDTH // 2, POST_Y_POS + POST_HEIGHT // 2))
 
-        screen.blit(text_surface, text_rect)
 

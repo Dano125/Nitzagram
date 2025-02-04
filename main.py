@@ -20,17 +20,14 @@ def main():
     background = pygame.transform.scale(background,
                                         (WINDOW_WIDTH, WINDOW_HEIGHT))
 
-    # TODO: add a post here
     # ----- ↓↓↓ POST LIST!!! ↓↓↓ -----
     posts_list = []
 
-    # ----- ↓↓↓ EMPTY TEST POST!!! ↓↓↓ -----
     noa_img = "Images\\noa_kirel.jpg"
     test_post = ImagePost("daniel", "beer", "yay", noa_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(test_post)
 
-    # ----- ↓↓↓ Shrekxy IMAGE TEST POST!!! ↓↓↓ -----
     shrekxy_img = "Images\\shrekxy_img.jpg"
     image_post = ImagePost("Ron", "North Korea", "Long live Kim Jong Un", shrekxy_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
@@ -53,6 +50,10 @@ def main():
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(four_post)
     
+    text_post = TextPost("Yavne GYM", "Yavne", "what is going on in this country", "Even tho im married i like to go to the gym every day", (50, 100, 250), (255, 0, 255))
+    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
+    posts_list.append(text_post)
+
     post_index_to_display = 0
     running = True
     while running:
