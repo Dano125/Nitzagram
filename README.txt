@@ -2,7 +2,7 @@
 Nitzanim Instagram project w/ my homies
 ---RULES---
 1. No P*rn !
-2. No Shrek boobs
+2. No Shrek sus photos
 3. No annoying issues
 4. No war crimes
 5. No homo
@@ -25,7 +25,7 @@ Nitzanim Instagram project w/ my homies
 670. The rule under ing the  te
 671. The rule under me is telling the truth
 672. The rule above me is lying
-673. WHEN YOU UPLOAD A MEME MAKE SURE IT'S NOT JUST CROPPED PORN!!!
+673. WHEN YOU UPLOAD A MEME MAKE SURE IT'S NOT JUST CROPPED P*RN!!!
 674. DON'T WRITE WITH ONLY CAPS!!!
 675. No loli, only milfs
 676. Zindani isn't allowed to turn on Mizrahit
@@ -33,3 +33,6 @@ Nitzanim Instagram project w/ my homies
 10. make everything perfect
 11. everything is legal as long as there are no cops
 12.if there are cops you need to run fast
+13. go to rule 999
+999. Itamar if you read this we will give you a cookie :)
+1000. I love you guys

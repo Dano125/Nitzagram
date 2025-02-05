@@ -22,7 +22,8 @@ class TextPost(Post):
         text_list = from_text_to_array(self.text)
         for i in text_list:
             text = font.render(i, True, self.text_color)
-            screen.blit(text, (TEXT_POST_X_POS, TEXT_POST_Y_POS + TEXT_POST_LINE_HEIGHT * text_list.index(i)))
+            text_rect = text.get_rect(center=(POST_X_POS + POST_WIDTH // 2, ((POST_Y_POS + POST_HEIGHT // 2) - ((TEXT_POST_LINE_HEIGHT * len(text_list)) // 2) + TEXT_POST_LINE_HEIGHT * text_list.index(i))))
+            screen.blit(text, text_rect)
 
 
 

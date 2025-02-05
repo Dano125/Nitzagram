@@ -23,11 +23,6 @@ def main():
     # ----- ↓↓↓ POST LIST!!! ↓↓↓ -----
     posts_list = []
 
-    noa_img = "Images\\noa_kirel.jpg"
-    test_post = ImagePost("daniel", "beer", "yay", noa_img)
-    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
-    posts_list.append(test_post)
-
     shrekxy_img = "Images\\shrekxy_img.jpg"
     image_post = ImagePost("Ron", "North Korea", "Long live Kim Jong Un", shrekxy_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
@@ -50,9 +45,18 @@ def main():
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(four_post)
     
-    text_post = TextPost("President Trump", "Alabama", "THE N-WORD!","Bomb France? Comment yes/no", (150, 0, 0), (0, 0, 0))
+    text_post = TextPost("Itay", "Tel Aviv", "i love felix from re:zero!", "best nitzagram" ,(150, 50, 0), (230, 230, 250))
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     posts_list.append(text_post)
+
+    work_img = "Images\\work_img.jpg"
+    four_post = ImagePost("Itamer", "Isral", "its me in work", work_img)
+    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
+    posts_list.append(four_post)
+
+    long_post = TextPost("Daniel", "aroma's free wifi", "im addicted to coffee", "1. In the beginning God created the heaven and the earth", (50, 50, 0), (250, 230, 250))
+    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
+    posts_list.append(long_post)
 
     post_index_to_display = 0
     running = True
