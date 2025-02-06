@@ -33,6 +33,7 @@ Nitzanim Instagram project w/ my homies
 10. make everything perfect
 11. everything is legal as long as there are no cops
 12.if there are cops you need to run fast
+12.5 if the cops catch you I don't know you
 13. go to rule 999
 999. Itamar if you read this we will give you a cookie :)
-1000. I love you guys
+1000. I love you guys(we too :) )
