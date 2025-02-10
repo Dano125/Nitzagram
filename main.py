@@ -1,4 +1,4 @@
-import pygame
+import pygame, time
 from pygame.examples.cursors import image
 
 from helpers import screen
@@ -27,6 +27,7 @@ def main():
     image_post = ImagePost("Ron", "North Korea", "Long live Kim Jong Un", shrekxy_img)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
+    share_rect = pygame.Rect(SHARE_BUTTON_X_POST, SHARE_BUTTON_Y_POS, SHARE_BUTTON_WIDTH, SHARE_BUTTON_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(image_post)
     
@@ -71,6 +72,7 @@ def main():
     posts_list.append(long_post)
 
     post_index_to_display = 0
+    shere_btn_flag = False
     running = True
     while running:
         # Grabs events such as key pressed, mouse pressed and so.
@@ -93,6 +95,11 @@ def main():
                         post_index_to_display += 1
                 if comment_rect.collidepoint(mouse_pos):
                     posts_list[post_index_to_display].add_comment()
+                
+                if share_rect.collidepoint(mouse_pos):
+                    print("SHERE BUTTON PRESSED!!!")
+                    ## Operation no friends ##
+                    shere_btn_flag = True
 
         # Display the background, presented Image, likes, comments, tags and location(on the Image)
         screen.fill(BLACK)
@@ -101,8 +108,27 @@ def main():
         # Shows the next post according to the post index
         posts_list[post_index_to_display].display()
 
+        if shere_btn_flag:
+            rec = pygame.Surface((WINDOW_WIDTH/10 * 8, WINDOW_HEIGHT/10 * 2))
+            rec.set_alpha(240)
+            rec.fill((150,150,150))
+            screen.blit(rec, (WINDOW_WIDTH/10, WINDOW_HEIGHT/10 * 4))
+
+            # Shere button roast
+            shere_text_pos = (WINDOW_WIDTH/10 * 2 - 5, WINDOW_HEIGHT/100 * 45)
+            font = pygame.font.SysFont('chalkduster.ttf', 30)
+            comment_text = font.render("lol, You have no friends", True, BLACK)
+            text2 = font.render("who are you fooling", True, BLACK)
+            screen.blit(comment_text, shere_text_pos)
+            screen.blit(text2, (shere_text_pos[0] + 15, shere_text_pos[1] + 35))
+
         # Update display - without input update everything
         pygame.display.update()
+
+        # Shere button roast 2nd
+        if shere_btn_flag:
+            time.sleep(2)
+            shere_btn_flag = False
 
         # Set the clock tick to be 60 times per second. 60 frames for second.
         clock.tick(60)
