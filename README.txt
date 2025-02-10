@@ -37,3 +37,5 @@ Nitzanim Instagram project w/ my homies
 13. go to rule 999
 999. Itamar if you read this we will give you a cookie :)
 1000. I love you guys(we too :) )
+1001. Shimi shimi yay shimi yay shimi ya
+1002. Swa la la laaaaaa
