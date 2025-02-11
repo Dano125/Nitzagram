@@ -6,8 +6,8 @@ from class_module import Post
 
 
 class TextPost(Post):
-    def __init__(self, username, location, description, text, text_color, background_color):
-        super().__init__(username, location, description)
+    def __init__(self, username, location, description, text, text_color, background_color, sound=None):
+        super().__init__(username, location, description, sound)
         self.text = text
         self.text_color = text_color
         self.bg_color = background_color

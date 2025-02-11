@@ -24,7 +24,7 @@ def main():
     posts_list = []
 
     shrekxy_img = "Images\\shrekxy_img.jpg"
-    image_post = ImagePost("Ron", "North Korea", "Long live Kim Jong Un", shrekxy_img)
+    image_post = ImagePost("Ron", "North Korea", "Long live Kim Jong Un", shrekxy_img, "Music\\Chess_(slowed).mp3")
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     share_rect = pygame.Rect(SHARE_BUTTON_X_POST, SHARE_BUTTON_Y_POS, SHARE_BUTTON_WIDTH, SHARE_BUTTON_HEIGHT)
@@ -74,6 +74,7 @@ def main():
     post_index_to_display = 0
     shere_btn_flag = False
     running = True
+    posts_list[post_index_to_display].play_sound()
     while running:
         # Grabs events such as key pressed, mouse pressed and so.
         # Going through all the events that happened in the last clock tick
@@ -93,6 +94,9 @@ def main():
                         post_index_to_display = 0
                     else:
                         post_index_to_display += 1
+                    
+                    pygame.mixer.music.stop()
+                    posts_list[post_index_to_display].play_sound()
                 if comment_rect.collidepoint(mouse_pos):
                     posts_list[post_index_to_display].add_comment()
                 

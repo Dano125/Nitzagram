@@ -1,5 +1,5 @@
 import pygame
-
+import os
 from constants import *
 from helpers import *
 from .Comment import Comment
@@ -9,13 +9,14 @@ class Post:
     """
     A class used to represent post on Nitzagram
     """
-    def __init__(self, username, location, description):
+    def __init__(self, username, location, description, sound=None):
         self.username = username
         self.location = location
         self.description = description
         self.likes_counter = 0
         self.comments = []
         self.comments_display_index = len(self.comments)
+        self.sound = sound
 
     def add_like(self):
         self.likes_counter += 1
@@ -32,6 +33,9 @@ class Post:
 
         :return: None
         """
+        # if self.sound is not None:
+        #     pygame.mixer.music.load(self.sound)
+        #     pygame.mixer.music.play()
         font = pygame.font.SysFont('chalkduster.ttf', UI_FONT_SIZE)
 
         username = font.render(self.username, True, BLACK)
@@ -77,3 +81,8 @@ class Post:
             position_index += 1
             if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
                 break
+    
+    def play_sound(self):
+        if self.sound is not None:
+            pygame.mixer.music.load(self.sound)
+            pygame.mixer.music.play()
