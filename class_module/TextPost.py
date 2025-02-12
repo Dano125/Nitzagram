@@ -6,6 +6,9 @@ from class_module import Post
 
 
 class TextPost(Post):
+    """
+    A class used to represent a text post on Nitzagram
+    """
     def __init__(self, username, location, description, text, text_color, background_color, sound=None):
         super().__init__(username, location, description, sound)
         self.text = text

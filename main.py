@@ -1,9 +1,8 @@
 import pygame, time
-from pygame.examples.cursors import image
 
 from helpers import screen
 from constants import *
-from class_module import Post, ImagePost, TextPost, Comment
+from class_module import ImagePost, TextPost
 
 
 def main():
@@ -20,7 +19,7 @@ def main():
     background = pygame.transform.scale(background,
                                         (WINDOW_WIDTH, WINDOW_HEIGHT))
 
-    # ----- ↓↓↓ POST LIST!!! ↓↓↓ -----
+    # ----- ↓↓↓ POSTS!!! ↓↓↓ -----
     posts_list = []
 
     shrekxy_img = "Images\\shrekxy_img.jpg"
@@ -81,24 +80,24 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-
+            # MOUSE EVENTS ↓↓↓
             if event.type == pygame.MOUSEBUTTONDOWN:  # check for mouse events
                 mouse_pos = event.pos  # Get mouse position
 
                 if like_rect.collidepoint(mouse_pos):  # check if mouse click like
                      posts_list[post_index_to_display].add_like()
                      
-                if post_rect.collidepoint(mouse_pos):
-                    # Check if the user clicked on the view more comments button and advances to the next post in a loop
-                    if post_index_to_display == len(posts_list) - 1:
+                if post_rect.collidepoint(mouse_pos):  # check if mouse click post
+                    if post_index_to_display == len(posts_list) - 1:  # go to the next post
                         post_index_to_display = 0
                     else:
                         post_index_to_display += 1
                     
-                    pygame.mixer.music.stop()
-                    posts_list[post_index_to_display].play_sound()
+                    pygame.mixer.music.stop()  # clear the previos audio
+                    posts_list[post_index_to_display].play_sound()  # if the post has audio attached, play the audio
+                # check if mouse click comments
                 if comment_rect.collidepoint(mouse_pos):
-                    posts_list[post_index_to_display].add_comment()
+                    posts_list[post_index_to_display].add_comment()  # type and add a comment
                 
                 if share_rect.collidepoint(mouse_pos):
                     print("SHERE BUTTON PRESSED!!!")

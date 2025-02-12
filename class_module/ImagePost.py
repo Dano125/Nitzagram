@@ -6,6 +6,9 @@ from class_module import Post
 
 
 class ImagePost(Post):
+    """
+    A class used to represent an image post on Nitzagram
+    """
     def __init__(self, username, location, description, img_path, sound=None):
         super().__init__(username, location, description, sound)
         self.img_path = img_path
