@@ -31,21 +31,21 @@ def main():
     posts_list.append(image_post)
     
     ronaldo_img = "Images\\ronaldo.jpg"
-    sec_post = ImagePost("Itay", "Portugal", "Long live Ronaldo", ronaldo_img)
+    sec_post = ImagePost("Itay", "Portugal", "Long live Ronaldo", ronaldo_img, "Music\\king.mp3"))
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(sec_post)
 
     masts_img = "Images\\masts_img.jpg"
-    tre_post = ImagePost("daniel", "Isral", "sus", masts_img)
+    tre_post = ImagePost("daniel", "Isral", "sus", masts_img, "Music\\me.mp3"))
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(tre_post)
 
     man_img = "Images\\man_img.jpg"
-    four_post = ImagePost("Ron", "?", "my man", man_img)
+    four_post = ImagePost("Ron", "?", "my man", man_img,"Music\\save.mp3"))
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
@@ -58,7 +58,7 @@ def main():
     posts_list.append(text_post)
 
     work_img = "Images\\work_img.jpg"
-    four_post = ImagePost("Itamer", "Isral", "its me in work", work_img)
+    four_post = ImagePost("Itamer", "Isral", "its me in work", work_img,"Music\\red.mp3"))
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
