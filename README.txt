@@ -36,6 +36,8 @@ Nitzanim Instagram project w/ my homies
 12.5 if the cops catch you I don't know you
 13. go to rule 999
 999. Itamar if you read this we will give you a cookie :)
-1000. I love you guys(we too :) )
+1000. I love you guys [GUYS: we too :)]
 1001. Shimi shimi yay shimi yay shimi ya
 1002. Swa la la laaaaaa
+1003. Swa la la la  SWA LA LA LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+1004. [ music ]

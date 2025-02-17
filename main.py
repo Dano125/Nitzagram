@@ -52,7 +52,7 @@ def main():
     posts_list.append(four_post)
 
     work_img = "Images\\work_img.jpg"
-    four_post = ImagePost("Itamer", "Isral", "its me in work", work_img, "Music\\red.mp3")
+    four_post = ImagePost("Itamer", "Mars", "its me in work", work_img) #! / "Music\\red.mp3" - no, just no PTDS ALLART!
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
@@ -64,7 +64,7 @@ def main():
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(text_post)
 
-    long_post = TextPost("Daniel", "aroma's free wifi", "im addicted to coffee", "1. In the beginning God created the heaven and the earth (Genesis 1:1)", (50, 50, 0), (250, 230, 250))
+    long_post = TextPost("Daniel", "Aroma's free wifi", "im addicted to coffee", "1. In the beginning God created the heaven and the earth (Genesis 1:1)", (50, 50, 0), (250, 230, 250))
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
@@ -100,7 +100,6 @@ def main():
                     posts_list[post_index_to_display].add_comment()  # type and add a comment
                 
                 if share_rect.collidepoint(mouse_pos):
-                    print("SHERE BUTTON PRESSED!!!")
                     ## Operation no friends ##
                     shere_btn_flag = True
 
