@@ -2,7 +2,7 @@ import pygame, time
 
 from helpers import screen
 from constants import *
-from class_module import ImagePost, TextPost
+from classes import ImagePost, TextPost
 
 
 def main():

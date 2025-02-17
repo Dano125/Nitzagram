@@ -2,7 +2,7 @@ import pygame
 
 from constants import *
 from helpers import screen
-from class_module import Post
+from classes import Post
 
 
 class ImagePost(Post):

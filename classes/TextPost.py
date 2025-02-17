@@ -2,7 +2,7 @@ import pygame
 
 from constants import *
 from helpers import screen, from_text_to_array
-from class_module import Post
+from classes import Post
 
 
 class TextPost(Post):
