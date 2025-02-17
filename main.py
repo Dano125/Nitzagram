@@ -52,7 +52,7 @@ def main():
     posts_list.append(four_post)
 
     work_img = "Images\\work_img.jpg"
-    four_post = ImagePost("Itamer", "Mars", "its me in work", work_img) #! / "Music\\red.mp3" - no, just no PTDS ALLART!
+    four_post = ImagePost("Itamer", "Mars", "its me in work", work_img, "Music\\Soviet March.mp3")
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
