@@ -9,7 +9,7 @@ class Post:
     """
     A class used to represent post on Nitzagram
     """
-    def __init__(self, username, location, description, sound=None, volume=None):
+    def __init__(self, username, location, description, sound=None, volume=0.5):
         self.username = username
         self.location = location
         self.description = description
