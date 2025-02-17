@@ -9,8 +9,8 @@ class ImagePost(Post):
     """
     A class used to represent an image post on Nitzagram
     """
-    def __init__(self, username, location, description, img_path, sound=None):
-        super().__init__(username, location, description, sound)
+    def __init__(self, username, location, description, img_path, sound=None, volume=None):
+        super().__init__(username, location, description, sound, volume)
         self.img_path = img_path
 
     def display(self):

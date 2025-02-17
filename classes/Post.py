@@ -9,7 +9,7 @@ class Post:
     """
     A class used to represent post on Nitzagram
     """
-    def __init__(self, username, location, description, sound=None):
+    def __init__(self, username, location, description, sound=None, volume=None):
         self.username = username
         self.location = location
         self.description = description
@@ -17,6 +17,7 @@ class Post:
         self.comments = []
         self.comments_display_index = len(self.comments)
         self.sound = sound
+        self.volume = volume
 
     def add_like(self):
         self.likes_counter += 1
@@ -84,5 +85,8 @@ class Post:
     
     def play_sound(self):
         if self.sound is not None:
+            pygame.mixer.init()
             pygame.mixer.music.load(self.sound)
+            if self.volume is not None:
+                pygame.mixer.music.set_volume(1)
             pygame.mixer.music.play()

@@ -38,7 +38,7 @@ def main():
     posts_list.append(sec_post)
 
     masts_img = "Images\\masts_img.jpg"
-    tre_post = ImagePost("daniel", "Isral", "sus", masts_img, ) #! / Music\me.mp3 is not curappted
+    tre_post = ImagePost("daniel", "Isral", "sus", masts_img, "Music\scary_shrek_ost.mp3", 999) #! / Music\me.mp3 is not curappted
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
