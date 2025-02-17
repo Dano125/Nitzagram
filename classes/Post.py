@@ -88,5 +88,5 @@ class Post:
             pygame.mixer.init()
             pygame.mixer.music.load(self.sound)
             if self.volume is not None:
-                pygame.mixer.music.set_volume(1)
+                pygame.mixer.music.set_volume(self.volume)
             pygame.mixer.music.play()
