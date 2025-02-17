@@ -38,21 +38,21 @@ def main():
     posts_list.append(sec_post)
 
     masts_img = "Images\\masts_img.jpg"
-    tre_post = ImagePost("daniel", "Isral", "sus", masts_img, "Music\scary_shrek_ost.mp3", 0.5) #! / Music\me.mp3 is not curappted
+    tre_post = ImagePost("daniel", "Isral", "sus", masts_img, "Music\scary_shrek_ost.mp3", 0.25) #! / Music\me.mp3 is not curappted
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(tre_post)
 
     man_img = "Images\\man_img.jpg"
-    four_post = ImagePost("Ron", "?", "my man", man_img) #! / Music\save.mp3 is curappted
+    four_post = ImagePost("Ron", "?", "my man", man_img, "Music\\Spider-Man 3 - Black Suit Theme.mp3", 1)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(four_post)
 
     work_img = "Images\\work_img.jpg"
-    four_post = ImagePost("Itamer", "Mars", "its me in work", work_img, "Music\\Soviet March.mp3")
+    four_post = ImagePost("Itamer", "Mars", "its me in work", work_img, "Music\\Soviet March.mp3", 0.75)
     like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
     post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
