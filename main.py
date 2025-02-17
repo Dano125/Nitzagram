@@ -78,6 +78,14 @@ def main():
     comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(long_post)
 
+    bad_img = "Images/bad_webp.jpg"
+    bad_music = "Music/bad.mp3"
+    bad_post = ImagePost("SkullMan", "Your head", "Smells like sh!t in here.", bad_img, bad_music)
+    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
+    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
+    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
+    posts_list.append(bad_post)
+
     post_index_to_display = 0
     shere_btn_flag = False
     running = True
