@@ -24,66 +24,38 @@ def main():
 
     shrekxy_img = "Images\\shrekxy_img.jpg"
     image_post = ImagePost("Ron", "North Korea", "Long live Kim Jong Un", shrekxy_img, "Music\\Chess_(slowed).mp3")
-    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
-    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
-    share_rect = pygame.Rect(SHARE_BUTTON_X_POST, SHARE_BUTTON_Y_POS, SHARE_BUTTON_WIDTH, SHARE_BUTTON_HEIGHT)
-    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(image_post)
     
     ronaldo_img = "Images\\ronaldo.jpg"
     sec_post = ImagePost("Itay", "Portugal", "Long live Ronaldo", ronaldo_img, "Music\\king.mp3")
-    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
-    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
-    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(sec_post)
 
     masts_img = "Images\\masts_img.jpg"
     tre_post = ImagePost("daniel", "Isral", "sus", masts_img, "Music\scary_shrek_ost.mp3", 0.25) #! / Music\me.mp3 is not curappted
-    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
-    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
-    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(tre_post)
 
     man_img = "Images\\man_img.jpg"
     four_post = ImagePost("Ron", "?", "my man", man_img, "Music\\Spider-Man 3 - Black Suit Theme.mp3", 1)
-    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
-    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
-    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(four_post)
 
     work_img = "Images\\work_img.jpg"
     four_post = ImagePost("Itamer", "Mars", "its me in work", work_img, "Music\\Soviet March.mp3", 0.75)
-    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
-    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
-    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(four_post)   
      
     text_post = TextPost("Itay", "Tel Aviv", "i love felix from re:zero!", "best nitzagram" ,(150, 50, 0), (230, 230, 250))
-    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
-    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
-    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(text_post)
 
     sad_photo = "Images\sad_NO-img.jpeg"
     smallest_violin = "Music\world_smalles_violin_wav.mp3"
     sad_post = ImagePost("The team behind this app", "Daniel's Shreks dungeon", "It's dark in here", sad_photo, smallest_violin)
-    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
-    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
-    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(sad_post)
 
     long_post = TextPost("Daniel", "Aroma's free wifi", "im addicted to coffee", "1. In the beginning God created the heaven and the earth (Genesis 1:1)", (50, 50, 0), (250, 230, 250))
-    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
-    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
-    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(long_post)
 
     bad_img = "Images/bad_webp.jpg"
     bad_music = "Music/bad.mp3"
     bad_post = ImagePost("Skull_Man69!", "Your head", "Smells like sh!t in here.", bad_img, bad_music)
-    like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
-    post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
-    comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
     posts_list.append(bad_post)
 
     post_index_to_display = 0
@@ -100,10 +72,10 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN:  # check for mouse events
                 mouse_pos = event.pos  # Get mouse position
 
-                if like_rect.collidepoint(mouse_pos):  # check if mouse click like
+                if posts_list[post_index_to_display].like_rect.collidepoint(mouse_pos):  # check if mouse click like
                      posts_list[post_index_to_display].add_like()
                      
-                if post_rect.collidepoint(mouse_pos):  # check if mouse click post
+                if posts_list[post_index_to_display].post_rect.collidepoint(mouse_pos):  # check if mouse click post
                     if post_index_to_display == len(posts_list) - 1:  # go to the next post
                         post_index_to_display = 0
                     else:
@@ -112,10 +84,10 @@ def main():
                     pygame.mixer.music.stop()  # clear the previos audio
                     posts_list[post_index_to_display].play_sound()  # if the post has audio attached, play the audio
                 # check if mouse click comments
-                if comment_rect.collidepoint(mouse_pos):
+                if posts_list[post_index_to_display].comment_rect.collidepoint(mouse_pos):
                     posts_list[post_index_to_display].add_comment()  # type and add a comment
                 
-                if share_rect.collidepoint(mouse_pos):
+                if posts_list[post_index_to_display].share_rect.collidepoint(mouse_pos):
                     ## Operation no friends ##
                     shere_btn_flag = True
 

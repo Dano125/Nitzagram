@@ -18,6 +18,10 @@ class Post:
         self.comments_display_index = len(self.comments)
         self.sound = sound
         self.volume = volume
+        self.like_rect = pygame.Rect(LIKE_BUTTON_X_POS, LIKE_BUTTON_Y_POS, LIKE_BUTTON_WIDTH, LIKE_BUTTON_HEIGHT)
+        self.post_rect = pygame.Rect(POST_X_POS, POST_Y_POS, POST_WIDTH, POST_HEIGHT)
+        self.share_rect = pygame.Rect(SHARE_BUTTON_X_POST, SHARE_BUTTON_Y_POS, SHARE_BUTTON_WIDTH, SHARE_BUTTON_HEIGHT)
+        self.comment_rect = pygame.Rect(COMMENT_BUTTON_X_POST, COMMENT_BUTTON_Y_POS, COMMENT_BUTTON_WIDTH, COMMENT_BUTTON_HEIGHT)
 
     def add_like(self):
         self.likes_counter += 1
